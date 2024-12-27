@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Checkout | Computer Part Shop</title>
+    <title>Thank you | Computer Part Shop</title>
 
     <!-- This is from bootstrap icons: https://icons.getbootstrap.com/#install -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
@@ -66,77 +66,16 @@
         </div>
     </nav>
 
-    <main class="container mt-4 mb-4">
-        <h1 class="fs-4 mb-4">Your Cart</h1>
-        <div class="row g-4" id="cart-items"></div>
+    <main class="container mt-4">
+        <h1 class="fs-4 mb-2">Thank you!</h1>
+        <p>Your purchase has been completed. We will ship your items and notify you by email when they are on the way.
+        </p>
 
-        <section id="details">
-            <div class="row mt-5">
-                <div class="col-sm">
-                    <h2 class="fs-5">Shipping Details</h2>
-                    <p>To update your address, go to the <a href="user-details.html">user details</a> page.</p>
-
-                    <div class="mb-3">
-                        <label for="line1" class="form-label fw-bold">Address Line 1</label>
-                        <p id="line1"></p>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="line2" class="form-label fw-bold">Address Line 2</label>
-                        <p id="line2"></p>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="city" class="form-label fw-bold">City</label>
-                        <p id="city"></p>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="county" class="form-label fw-bold">County</label>
-                        <p id="county"></p>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="eircode" class="form-label fw-bold">Eircode</label>
-                        <p id="eircode"></p>
-                    </div>
-                </div>
-
-                <div class="col-sm">
-                    <h2 class="fs-5 mb-3">Billing Details</h2>
-
-                    <form id="billing">
-                        <div class="mb-3">
-                            <label for="card-number" class="form-label">Card Number</label>
-                            <input type="text" class="form-control" id="card-number" name="card-number"
-                                placeholder="4319 1234 1234 1234" pattern="^\d{4} \d{4} \d{4} \d{4}$" required>
-                        </div>
-
-                        <div class="row mb-3">
-                            <div class="col">
-                                <label for="cvv" class="form-label">CVV</label>
-                                <input type="text" class="form-control" id="cvv" name="cvv" placeholder="123"
-                                    pattern="^\d{3}$" required>
-                            </div>
-
-                            <div class="col">
-                                <label for="expiry" class="form-label">Expiry</label>
-                                <input type="text" class="form-control" id="expiry" name="expiry" placeholder="02/25"
-                                    pattern="^\d{2}\/\d{2}$" required>
-                            </div>
-                        </div>
-
-                        <button class="btn btn-primary">Save</button>
-                    </form>
-                </div>
-            </div>
-            </div>
+        <a class="btn btn-primary" href="index.html">Go back to the home page</a>
     </main>
 
-    <script src="js/products.js"></script>
     <script src="js/user.js"></script>
     <script src="js/cart.js"></script>
-    <script src="js/checkout.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

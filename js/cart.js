@@ -1,9 +1,6 @@
 const cartItemCount = document.getElementById("cart-item-count");
 
-/**
- * Updates the cart item count element with the amount of items saved in the user's cart.
- */
-function showCartItemCount(userData) {
+function getCartItemsCount(userData) {
 	// For reference, the user's cart is structured like this:
 	// { cart: { product_id: amount } }
 	let itemsInCart = 0;
@@ -14,6 +11,15 @@ function showCartItemCount(userData) {
 	for (const product in userData.cart) {
 		itemsInCart += userData.cart[product];
 	}
+
+	return itemsInCart;
+}
+
+/**
+ * Updates the cart item count element with the amount of items saved in the user's cart.
+ */
+function showCartItemCount(userData) {
+	const itemsInCart = getCartItemsCount(userData);
 
 	if (itemsInCart === 0) {
 		// Instead of showing 0, just hide the badge.

@@ -1,5 +1,18 @@
 const cartItems = document.getElementById("cart-items");
-const continueButton = document.getElementById("continue");
+const detailsArea = document.getElementById("details");
+const billingForm = document.getElementById("billing");
+
+function purchase(event) {
+	event.preventDefault();
+
+	const data = getUserData();
+	data.cart = {};
+	saveUserData(data);
+
+	window.location.replace("thank-you.html");
+}
+
+billingForm.onsubmit = purchase;
 
 function insertCartItems() {
 	// Clear the items in the cart container in-case they have already been populated.
@@ -15,15 +28,54 @@ function insertCartItems() {
 		message.textContent = "Your cart is empty! Go to the shop to add some items.";
 
 		cartItems.appendChild(message);
+		detailsArea.textContent = "";
 		return;
 	}
 
-	continueButton.style.display = "inline-block";
+	hideDetailsIfNotLoggedIn();
 
 	for (const productId in cart) {
 		const card = createCartItemCard(productId, cart[productId]);
 		cartItems.appendChild(card);
 	}
+}
+
+function hideDetailsIfNotLoggedIn() {
+	const username = getUserData().username;
+	if (!username) {
+		detailsArea.textContent = "";
+
+		const link = document.createElement("a");
+		link.classList.add("btn", "btn-primary", "mt-3");
+
+		link.textContent = "Login to continue";
+		link.href = "login.html?redirect-to=checkout.html";
+
+		detailsArea.appendChild(link);
+
+		return;
+	}
+
+	fillAddress();
+}
+
+function fillAddress() {
+	const data = getUserData();
+
+	const line1 = document.getElementById("line1");
+	line1.textContent = data.address.line1;
+
+	const line2 = document.getElementById("line2");
+	line2.textContent = data.address.line2;
+
+	const city = document.getElementById("city");
+	city.textContent = data.address.city;
+
+	const county = document.getElementById("county");
+	county.textContent = data.address.county;
+
+	const eircode = document.getElementById("eircode");
+	eircode.textContent = data.address.eircode;
 }
 
 function createCartItemCard(productId, quantity) {
