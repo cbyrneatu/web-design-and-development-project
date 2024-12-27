@@ -43,7 +43,11 @@ function handleLoginFormSubmit(event) {
 
     const userData = getUserData();
     userData.username = USERNAME;
-    userData.address = { line1: "My House", line2: "My Village", city: "Athlone", county: "Westmeath", eircode: "N37 R600" };
+
+    // Only fill in a default address if the user didn't change it before.
+    if (!userData.address) {
+        userData.address = { line1: "My House", line2: "My Village", city: "Athlone", county: "Westmeath", eircode: "N37 R600" };
+    }
 
     saveUserData(userData);
     redirect();
