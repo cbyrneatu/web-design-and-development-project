@@ -88,17 +88,17 @@ function createCartItemCard(productId, quantity) {
 	container.className = "row g-0 my-2";
 
 	const imageContainer = document.createElement("div");
-	imageContainer.className = "col";
+	imageContainer.className = "col-md";
 
 	const image = document.createElement("img");
 	image.src = product.image;
-	image.style.maxHeight = "125px";
 	image.className = "img-fluid rounded";
+	image.style.maxHeight = "125px";
 
 	imageContainer.appendChild(image);
 
 	const bodyContainer = document.createElement("div");
-	bodyContainer.className = "col-md-8";
+	bodyContainer.className = "col-md-7";
 
 	const body = document.createElement("div");
 	body.className = "card-body";
@@ -115,7 +115,7 @@ function createCartItemCard(productId, quantity) {
 	bodyContainer.appendChild(body);
 
 	const actionsContainer = document.createElement("div");
-	actionsContainer.className = "col-md-2 align-items-center row";
+	actionsContainer.className = "col-md-3 align-items-center row";
 
 	const quantityContainer = document.createElement("div");
 	quantityContainer.className = "input-group";
