@@ -45,19 +45,34 @@
                 </ul>
             </div>
 
-            <a class="nav-link position-relative" href="checkout.html">
-                <!-- This is from bootstrap icons: https://icons.getbootstrap.com/#install -->
-                <i class="bi bi-cart"></i>
+            <div class="row">
+                <div class="col">
+                    <a class="nav-link position-relative" href="checkout.html">
+                        <!-- This is from bootstrap icons: https://icons.getbootstrap.com/#install -->
+                        <i class="bi bi-cart"></i>
 
-                <span id="cart-item-count"
-                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"></span>
-            </a>
+                        <span id="cart-item-count"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"></span>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a class="nav-link position-relative" href="login.html">
+                        <!-- This is from bootstrap icons: https://icons.getbootstrap.com/#install -->
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 
     <main class="container mt-4  mb-4">
         <h1 class="fs-4 mb-4">Your Cart</h1>
         <div class="row g-4" id="cart-items"></div>
+
+        <!-- Using inline styles here to hide the button until the JavaScript ensures that there is contents in the cart. -->
+        <a href="login.html?redirect-to=purchase.html" style="display: none" id="continue"
+            class="btn btn-primary mt-4">Continue</a>
     </main>
 
     <script src="js/products.js"></script>

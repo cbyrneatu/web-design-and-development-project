@@ -11,7 +11,7 @@ function getUserData() {
 	if (!data) {
 		// If the user does not have any data in their local storage yet, we can just return
 		// a default value.
-		return { cart: {} };
+		return { cart: {}, username: null, address: null };
 	}
 
 	return JSON.parse(data);

@@ -1,4 +1,5 @@
 const cartItems = document.getElementById("cart-items");
+const continueButton = document.getElementById("continue");
 
 function insertCartItems() {
 	// Clear the items in the cart container in-case they have already been populated.
@@ -16,6 +17,8 @@ function insertCartItems() {
 		cartItems.appendChild(message);
 		return;
 	}
+
+	continueButton.style.display = "inline-block";
 
 	for (const productId in cart) {
 		const card = createCartItemCard(productId, cart[productId]);
