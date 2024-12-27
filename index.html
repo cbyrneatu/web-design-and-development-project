@@ -45,33 +45,22 @@
                 </ul>
             </div>
 
-            <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <!-- This is from bootstrap icons: https://icons.getbootstrap.com/#install -->
-                    <i class="bi bi-person"></i>
-                </a>
+            <a class="nav-link position-relative" href="checkout.html">
+                <!-- This is from bootstrap icons: https://icons.getbootstrap.com/#install -->
+                <i class="bi bi-cart"></i>
 
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                        <a class="dropdown-item" href="login.html">
-                            Login
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="dropdown-item" href="login.html">
-                            Sign-up
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                <span id="cart-item-count"
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"></span>
+            </a>
         </div>
     </nav>
 
     <main class="container mt-4">
         <h1 class="fs-4 mb-4">Home</h1>
     </main>
+
+    <script src="js/user.js"></script>
+    <script src="js/cart.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
