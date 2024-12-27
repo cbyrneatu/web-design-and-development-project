@@ -18,7 +18,7 @@ function createProductCard(product) {
 	body.className = "card-body";
 
 	const image = document.createElement("img");
-	image.src = "https://placehold.co/600x400";
+	image.src = product.image;
 	image.className = "card-img-top";
 
 	const title = document.createElement("h5");

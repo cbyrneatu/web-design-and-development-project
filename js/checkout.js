@@ -91,7 +91,8 @@ function createCartItemCard(productId, quantity) {
 	imageContainer.className = "col";
 
 	const image = document.createElement("img");
-	image.src = "https://placehold.co/500x250";
+	image.src = product.image;
+	image.style.maxHeight = "125px";
 	image.className = "img-fluid rounded";
 
 	imageContainer.appendChild(image);

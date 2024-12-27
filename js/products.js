@@ -1,32 +1,38 @@
 const products = [
 	{
-		id: "item-1",
-		name: "Item 1",
-		description: "This item is really good and you should buy it right now!",
+		id: "cpu",
+		name: "CPU",
+		description: "Upgrade your computer with this really fast CPU!",
+		image: "images/cpu.png"
 	},
 	{
-		id: "item-2",
-		name: "Item 2",
-		description: "This item is really good and you should buy it right now!",
+		id: "speakers",
+		name: "Speakers",
+		description: "Improve your sound quality with these high-quality speakers.",
+		image: "images/speakers.png"
 	},
 	{
-		id: "item-3",
-		name: "Item 3",
-		description: "This item is really good and you should buy it right now!",
+		id: "keyboard",
+		name: "Keyboard",
+		description: "This keyboard provides comfort and productivity.",
+		image: "images/keyboard.png",
 	},
 	{
-		id: "item-4",
-		name: "Item 4",
-		description: "This item is really good and you should buy it right now!",
+		id: "mouse",
+		name: "Mouse",
+		description: "Enhance your productivity with this ergonomic mouse.",
+		image: "images/mouse.png"
 	},
 	{
-		id: "item-5",
-		name: "Item 5",
-		description: "This item is really good and you should buy it right now!",
+		id: "headphones",
+		name: "Headphones",
+		description: "Listen to music without disturbing others around you!",
+		image: "images/headphones.png"
 	},
 	{
-		id: "item-6",
-		name: "Item 6",
-		description: "This item is really good and you should buy it right now!",
+		id: "graphics-card",
+		name: "Graphics Card",
+		description: "Play performance-intensive games with this graphics card.",
+		image: "images/graphics-card.png"
 	},
 ];
